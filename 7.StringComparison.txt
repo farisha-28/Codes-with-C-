@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str_1,str_2;
+    getline(cin,str_1);
+    getline(cin,str_2);
+    if(str_1.compare(str_2)==0){
+    	cout<<"They are equal."<<endl;
+	}
+    else cout<<"They are not equal !"<<endl;
+}

@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str;
+    int len =0;
+    str = "refrigerator";
+    for(int i=0; i<str.size(); i++){
+        len++;
+    }
+    cout<<"The length is : "<< len<<endl;
+}

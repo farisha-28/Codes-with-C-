@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str = "This is orange juice";
+    string str_search = "orange";
+    transform(str.begin(),str.end(),str.begin(),::tolower);
+    
+    int pos=str.find(str_search);
+    cout<<"The term we are searching for is at position : "<<pos<<endl;
+}

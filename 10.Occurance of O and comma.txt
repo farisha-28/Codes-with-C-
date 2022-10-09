@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str="Hello,World";
+    string str2="o";
+    string str3=",";
+    
+    int first_o=str.find(str2);
+    cout << "First occurrence of o is at :"<< first_o <<endl;
+    int last_o=str.rfind(str2);
+    cout << "Last occurrence of o is at : " << last_o<<endl;
+ 
+    int first_comma =str.find(str3);
+    cout << "First occurance of comma is at : "<< first_comma <<endl;
+    int last_comma = str.rfind(str3);
+    cout << "Last occurrence of comma is at : " << last_comma <<endl;
+
+}

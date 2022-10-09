@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str;
+    cout << "Enter the string : "<<endl;
+    getline(cin,str);
+    string s=str;
+    cout<<"Copied string is :"<< s <<endl;
+}

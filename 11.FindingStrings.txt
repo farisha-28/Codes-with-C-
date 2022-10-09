@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str="Hello,Good,Morning";
+    string str_search =",";
+    int location =str.find(str_search);
+    
+    cout << "String after first occurance : "<<endl;
+    for(int i= location+1; str[i]!=','; i++){
+        cout << str[i];
+    }
+    cout << endl;
+    int lastPosition = str.rfind(str_search);
+    cout << "String after second occurance : "<<endl;
+    for(int i=lastPosition+1; str[i]!='\0'; i++){
+    	
+        cout << str[i];
+    }
+}

@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str,str1;
+    getline(cin,str);
+    transform(str.begin(),str.end(),str.begin(),::tolower);
+    str1=str;
+    int s = str1.size();
+    reverse(str1.begin(), str1.begin()+s);
+    if(str == str1){
+    	cout<<"The string is Palindrome.";
+	}
+    else cout<<"It's not Palindrome !!";
+}
