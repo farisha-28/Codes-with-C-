@@ -1,0 +1,121 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+struct Node{
+    int data;
+    Node* next;
+};
+
+Node* head = NULL;
+
+void insert_first(int value){
+    
+    Node* single_node = new Node;
+    single_node->data = value;
+    single_node->next = NULL;
+    if(head == NULL){
+        head = single_node;
+    }
+    else{
+        Node* temp = head;
+        head = single_node;
+        head->next = temp;
+    }
+}
+
+
+void insert_last(int value){
+    
+    Node* single_node = new Node;
+    single_node->data = value;
+    single_node->next = NULL;
+    
+    Node* temp = head;
+    while(temp->next != NULL){
+        temp = temp->next;
+    }
+    temp->next = single_node;
+}
+
+
+void insert_middle(int value,int location){
+    
+    Node* single_node = new Node;
+    single_node->data = value;
+    single_node->next = NULL;
+    
+    Node* temp = head;
+    Node* pr = NULL;
+    
+    for(int i=0; i<location; i++){
+        pr = temp;
+        temp = temp->next;
+    }
+    pr->next = single_node;
+    single_node->next = temp;
+}
+
+void delete_first(){
+    Node* temp = head;
+    temp = temp->next;
+    head = temp;
+}
+
+void delete_last(){
+    Node* temp = head;
+     while(temp->next != NULL){
+        temp = temp->next;
+    }
+    temp->next = NULL;
+}
+
+
+void delete_middle(int location){
+    Node* temp = head;
+    Node* pr = NULL;
+    Node* leading = NULL;
+    
+    for(int i=0; i<location; i++){
+        pr = temp;
+        temp = temp->next;
+        leading = temp->next;
+    }
+    
+    temp->next = NULL;
+    pr->next = leading;
+    
+}
+
+void print_linkedlist(Node* head){
+    Node* temp = head;
+    
+    while(temp->next != NULL){
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+}
+
+int main(){
+   
+    // Node* head;
+    // Node* temp = head;
+    
+    insert_first(34);   //  34 14 20 55 
+    insert_last(20);
+    insert_last(40);
+    insert_last(55);
+    insert_last(90);
+    insert_last(100);   //    34 20 10 55 90 
+    insert_first(50);   
+    insert_middle(14,2);
+    insert_middle(10,4);
+    
+    delete_first();
+    delete_last();
+    delete_middle(1);
+    delete_middle(3);
+    
+    print_linkedlist(head);
+   
+ 
+}
